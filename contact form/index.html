@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <title>Order</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/order.js"></script>
+</head>
+
+<body>
+    <div class="container contact-form">
+        <h1></h1>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+                <address>NTL Blog</address>
+                <ul>
+                    <li>
+                        <span><i class = "fa fa-map-marker" aria-hidden = "true" 
+						style = "font-size: 1.25em;"></i></span>
+                        <span>Khu CNC Hòa Lạc <br />
+						Thạch Hoà, Thạch Thất <br />
+						Thành phố Hà Nội <a href = "https://www.facebook.com/THPTFPTHN/">Fschool (Hoà Lạc)</a>
+					</span>
+                    </li>
+                    <li>
+                        <span><i class = "fa fa-envelope" aria-hidden = "true"
+						style = "font-size: 1.25em;"></i></span>
+                        <span>linhntfx11174@funix.edu</span>
+                    </li>
+                    <li>
+                        <span><i class = "fa fa-phone-square" aria-hidden = "true"
+						style = "font-size: 1.25em;"></i></span>
+                        <span>0342108261</span>
+                    </li>
+                </ul>
+                <br>
+                <ul>
+                    <a href="https://www.facebook.com/monmm642k5/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook" aria-hidden="true" style="font-size: 2.75em;"></i></a>
+                    &emsp;
+                    <a href="https://www.instagram.com/_ntl64_/" target="_blank" title="Instagram">
+                        <i class="fa fa-instagram" aria-hidden="true" style="font-size: 2.75em;"></i></a>
+                    &emsp;
+                    <a href="index.html" target="_parent">
+                        <i class="fa fa-home" aria-hidden="true" style="font-size: 2.75em;"></i></a>
+                </ul>
+                <hr class="form_responsive">
+            </div>
+
+            <div class="col-md-6">
+                <form action="">
+                    <div class="form-group">
+                        <label for="cakes">Cake name: </label>
+                        <select class="form-control" name="cakes" id="cakes" required>
+                            <option value = "">-- Select cake --</option>
+                            <option value = "classic">Classic</option>
+                            <option value = "coconut">Coconut</option>
+                            <option value = "cream">Cream Cheese</option>
+                            <option value = "chocolate">Chocolate</option>
+                        </select>
+                        <p id="miscakes" style="color: red;"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="includes">Includes: <br></label>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="clu" value="Candle">Candles
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="clu" value="Firewwork">Firewwork
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="clu" value="Toys">Toys
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <input type="text" class="form-control" name="name" id="name" minlength="1" maxlength="100" required>
+                        <p id="misname" style="color: red"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message:</label>
+                        <input type="text" class="form-control" name="mes" id="mes" maxlength="30">
+                        <p id="mismes" style="color: red"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Delives to:</label>
+                        <textarea class="form-control" rows="5" name="deliver" id="deliver" minlength="1" maxlength="500" required></textarea>
+                        <p id="mismes" style="color: red"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="includes">Call before delives:&ensp;</label>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="radio1">
+                              <input type="radio" class="form-check-input" id="radio1" name="call" value="call">Yes
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="radio2">
+                              <input type="radio" class="form-check-input" id="radio2" name="call" value="nocall" checked="checked">No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" value="Order" class="btn btn-primary btn-block" onclick="checkAll();">Order now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
